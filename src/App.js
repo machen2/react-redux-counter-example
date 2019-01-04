@@ -4,10 +4,12 @@ import { createStore } from 'redux';
 import './App.css';
 import Counter from './Counter';
 
-function reducer() {
-    return {
-        count: 42
-    };
+const initialState = {
+    count: 0
+};
+
+function reducer(state = initialState, action) {
+    return state;
 }
 
 const store = createStore(reducer);
