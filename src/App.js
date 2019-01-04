@@ -9,7 +9,18 @@ const initialState = {
 };
 
 function reducer(state = initialState, action) {
-    return state;
+    switch(action.type) {
+        case 'INCREMENT':
+            return {
+                count: state.count + 1 // never change state like: state.count++
+            };
+        case 'DECREMENT':
+            return {
+                count: state.count - 1
+            };
+        default:
+            return state; // always have a fallback case of returning state
+    }
 }
 
 const store = createStore(reducer);
