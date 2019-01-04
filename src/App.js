@@ -4,7 +4,13 @@ import { createStore } from 'redux';
 import './App.css';
 import Counter from './Counter';
 
-const store = createStore();
+function reducer() {
+    return {
+        count: 42
+    };
+}
+
+const store = createStore(reducer);
 
 class App extends Component {
   render() {
